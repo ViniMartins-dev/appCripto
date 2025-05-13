@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, TextInput, button, Alert, Button } from 'react-native';
+import { View, TextInput, Alert, Button } from 'react-native';
 import { createCripto } from './Api';
 
 export default function Cadastro({navigation}) {
@@ -22,15 +22,15 @@ export default function Cadastro({navigation}) {
         } else {
             const addedCripto = await createCripto(newCripto);
             if(addedCripto) {
+                setNomeCripto('');
+                setSiglaCripto('');
+
                 Alert.alert('Sucesso!', 'Cadastro realizado com sucesso!', [
                     {text: 'OK', onPress: () => navigation.navigate('Home')},
                 ]);
             }
         }
     }
-
-    setNomeCripto('');
-    setSiglaCripto('');
 
     return (
         <View>
