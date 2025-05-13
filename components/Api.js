@@ -55,7 +55,7 @@ export const createCripto = async (CriptoData) => {
 
 export const deleteCripto = async (CriptoId, setRegistros) => {
     try {
-        const response = await fetch(`http://127.0.0.1:8001/api/cripto/${CriptoId}`, {
+        const response = await fetch(`${API_URL}/${CriptoId}`, {
             method: 'DELETE',
         });
 
@@ -93,7 +93,7 @@ export const deleteCripto = async (CriptoId, setRegistros) => {
 
 export const updateCripto = async (CriptoId, updateData, navigation) => {
     try {
-        const response = await fetch(`http://127.0.0.1:8001/api/cripto/${CriptoId}`, {
+        const response = await fetch(`${API_URL}/${CriptoId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

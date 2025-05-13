@@ -46,7 +46,7 @@ export default function Home({ navigation }) {
                                 style={[styles.button, styles.editButton]}
                                 onPress={() => navigation.navigate('Alterar', {cripto:item})}
                             >
-                                <Icon name="edit" size={20} color="#fff" />
+                                <Icon name="edit" size={20} color="#000" />
                             </TouchableOpacity>
                         </View>
                     </View>
