@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from '../components/Cadastro';
+import Home from '../components/Home';
 import Cadastro from '../components/Cadastro'
 import Alterar from '../components/Alterar';
 

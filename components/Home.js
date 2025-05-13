@@ -35,7 +35,7 @@ export default function Home({ navigation }) {
                         <Text style={styles.itemText}>
                             Cripto: {item.sigla} - Sigla: {item.nome}
                         </Text>
-                        <View style={buttonRow}>
+                        <View style={styles.buttonRow}>
                             <TouchableOpacity
                                 style={[styles.button, styles.deleteButton]}
                                 onPress={() => handleDelete(item.codigo)}
@@ -44,9 +44,9 @@ export default function Home({ navigation }) {
                             </TouchableOpacity>
                             <TouchableOpacity
                                 style={[styles.button, styles.editButton]}
-                                onPress={() => navigation.navigate('Alterar', {book:item})}
+                                onPress={() => navigation.navigate('Alterar', {cripto:item})}
                             >
-                                <Icon name="eidt" size={20} color="#fff" />
+                                <Icon name="edit" size={20} color="#fff" />
                             </TouchableOpacity>
                         </View>
                     </View>
